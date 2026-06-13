@@ -27,6 +27,68 @@
             <i class="ti ti-player-play"></i> Lihat Portofolio
         </a>
     </div>
+
+    {{-- SHOWCASE MELAYANG --}}
+    <div class="hero-showcase">
+        {{-- Floating Badge 1: Designer Profile --}}
+        <div class="floating-badge float-1">
+            <div class="badge-avatar">PS</div>
+            <div class="badge-text-col">
+                <span class="badge-title">@pixelstudio.id</span>
+                <span class="badge-subtitle">Creative Design Team</span>
+            </div>
+        </div>
+
+        {{-- Floating Badge 2: Stats --}}
+        <div class="floating-badge float-2">
+            <div class="badge-icon-box">
+                <i class="ti ti-checklist"></i>
+            </div>
+            <div class="badge-text-col">
+                <span class="badge-title">500+ Project</span>
+                <span class="badge-subtitle">Telah Diselesaikan</span>
+            </div>
+        </div>
+
+        {{-- Main Scanner Card --}}
+        <div class="hero-main-card">
+            <div class="scanner-header">
+                <span class="scanner-status">Studio Engine</span>
+                <span style="color: var(--gold); font-size: 14px;"><i class="ti ti-device-laptop"></i></span>
+            </div>
+            <h3 class="scanner-title">Pixel Studio</h3>
+            <p class="scanner-desc">Menerjemahkan visi kreatif brand Anda ke dalam bentuk visual yang memukau dan siap pakai.</p>
+            <div class="scanner-progress-bar">
+                <div class="scanner-progress-fill"></div>
+            </div>
+            <div class="scanner-progress-text">
+                <span>Rendering Ideas...</span>
+                <span>88%</span>
+            </div>
+        </div>
+
+        {{-- Floating Badge 3: Turnaround --}}
+        <div class="floating-badge float-3">
+            <div class="badge-icon-box gold">
+                <i class="ti ti-hourglass-high"></i>
+            </div>
+            <div class="badge-text-col">
+                <span class="badge-title">3 Hari Kerja</span>
+                <span class="badge-subtitle">Rata-rata Pengerjaan</span>
+            </div>
+        </div>
+
+        {{-- Floating Badge 4: Premium Quality --}}
+        <div class="floating-badge float-4">
+            <div class="badge-avatar" style="background: rgba(34, 197, 94, 0.1); color: #4ade80; box-shadow: none;">
+                <i class="ti ti-circle-check"></i>
+            </div>
+            <div class="badge-text-col">
+                <span class="badge-title">Kualitas File HD</span>
+                <span class="badge-subtitle">Termasuk PSD Sumber</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 {{-- STATS --}}
@@ -176,7 +238,7 @@
     </div>
 
     {{-- KONTAK & MEDIA SOSIAL ADMIN --}}
-    <div style="margin-top: 50px; text-align: center;">
+    <div id="kontak" style="margin-top: 50px; text-align: center;">
         <div class="section-label" style="margin-bottom: 10px;">Hubungi Kami</div>
         <h3 style="margin: 0 0 8px 0; font-size: 22px; font-weight: 700;">Temukan Kami di Media Sosial</h3>
         <p style="color: var(--text-muted); font-size: 14px; margin: 0 0 30px 0;">Ikuti update terbaru atau langsung hubungi admin kami</p>

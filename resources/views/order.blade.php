@@ -6,8 +6,8 @@
 <div class="container mt-5" style="color: var(--text-main); padding-bottom: 50px; max-width: 800px; margin: 0 auto; padding-left: 20px; padding-right: 20px;">
 
     <div style="margin-bottom: 30px;">
-        <h2 style="margin: 0 0 8px 0; font-size: 28px; font-weight: 700; color: #fff;">Formulir <span style="color: var(--gold);">Pemesanan Desain</span></h2>
-        <p style="margin: 0; color: var(--text-muted); font-size: 14px;">Isi detail brief kreatif di bawah ini untuk memulai project desain Anda.</p>
+        <h2 style="margin: 0 0 8px 0; font-size: 28px; font-weight: 700; color: var(--text-main);">Formulir <span style="color: var(--gold);">Pemesanan Desain</span></h2>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 14px;">Isi detail brief kreatif di bawah ini untuk memulai project desain Anda.</p>
     </div>
 
     {{-- Alert Error (Validasi Server-side) --}}
@@ -28,7 +28,7 @@
         <p id="js-error-msg" style="margin: 5px 0 0 0;"></p>
     </div>
 
-    <div style="background: var(--dark-surface); border: 1px solid var(--dark-border); padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+    <div style="background: var(--bg-surface); border: 1px solid var(--border); padding: 35px; border-radius: 15px; box-shadow: var(--shadow-md);">
         <form id="order-form" action="{{ route('order.post') }}" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 20px;" novalidate>
             @csrf
 

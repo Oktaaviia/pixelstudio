@@ -54,19 +54,16 @@
                 <div class="section-card-header">
                     <h3><i class="ti ti-package"></i> Pilihan Paket</h3>
                 </div>
-                <div style="padding:28px; text-align: center;">
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center; margin-bottom: 24px; background: rgba(255,255,255,0.02); padding: 16px; border-radius: 12px; border: 1px solid var(--dark-border);">
+                <div style="padding: 28px; text-align: center;">
+                    <div class="layanan-paket-grid">
                         @foreach($paketList as $pkg)
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-weight: 600; color: var(--text-main); font-size: 15px;">Paket {{ $pkg->nama }}</span>
-                            <span style="color: var(--gold); font-weight: 700; font-size: 15px;">({{ $pkg->price }})</span>
-                            @if(!$loop->last)
-                                <span style="color: var(--dark-border); margin-left: 12px; font-weight: 300;">|</span>
-                            @endif
+                        <div class="layanan-paket-card">
+                            <span class="layanan-paket-name">Paket {{ $pkg->nama }}</span>
+                            <span class="layanan-paket-price">{{ $pkg->price }}</span>
                         </div>
                         @endforeach
                     </div>
-                    <a href="{{ route('home') }}#paket" class="btn-hero-ghost" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 10px 24px;">
+                    <a href="{{ route('home') }}#paket" class="btn-hero-ghost" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 10px 24px; margin-top: 8px;">
                         <i class="ti ti-eye"></i> Lihat Detail Paket & Pemesanan
                     </a>
                 </div>

@@ -8,7 +8,7 @@
     <title>@yield('title', 'PixelStudio — Jasa Desain Grafis')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -109,6 +109,37 @@
                 setTimeout(function() { el.remove(); }, 500);
             }, 4000);
         });
+
+        // Scroll Spy untuk Navigasi Beranda
+        const homeLink = document.getElementById('nav-link-home');
+        const paketLink = document.getElementById('nav-link-paket');
+        const tentangLink = document.getElementById('nav-link-tentang');
+        
+        const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.php' || window.location.pathname === '';
+        
+        if (isHomePage && homeLink && paketLink && tentangLink) {
+            const paketSec = document.getElementById('paket');
+            const tentangSec = document.getElementById('tentang');
+            
+            function onScrollSpy() {
+                const scrollPos = window.scrollY + 140; // offset untuk navbar & headroom
+                let activeLink = homeLink;
+                
+                if (tentangSec && scrollPos >= tentangSec.offsetTop) {
+                    activeLink = tentangLink;
+                } else if (paketSec && scrollPos >= paketSec.offsetTop) {
+                    activeLink = paketLink;
+                }
+                
+                [homeLink, paketLink, tentangLink].forEach(link => {
+                    link.classList.remove('active');
+                });
+                activeLink.classList.add('active');
+            }
+            
+            window.addEventListener('scroll', onScrollSpy);
+            setTimeout(onScrollSpy, 150); // Delay sedikit agar scroll anchor selesai
+        }
     });
     </script>
 

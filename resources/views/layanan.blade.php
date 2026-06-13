@@ -356,5 +356,20 @@ function editLayanan(item) {
     document.getElementById('editLayananDesc').value     = item.description || '';
     toggleModal('modalEditLayanan');
 }
+
+// Auto-filter category from query parameters
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const katParam = urlParams.get('kategori');
+    if (katParam) {
+        const chips = document.querySelectorAll('.filter-chip');
+        chips.forEach(chip => {
+            const onclickAttr = chip.getAttribute('onclick');
+            if (onclickAttr && onclickAttr.includes("'" + katParam + "'")) {
+                chip.click();
+            }
+        });
+    }
+});
 </script>
 @endsection
