@@ -47,17 +47,17 @@ Route::get('/admin/crud', [PageController::class, 'adminLayanan'])->name('admin.
 
 // CRUD Layanan (Packages)
 Route::post('/pengelolaan/layanan', [PageController::class, 'storeLayanan'])->name('layanan.store');
-Route::put('/pengelolaan/layanan/{id}', [PageController::class, 'updateLayanan'])->name('layanan.update');
+Route::post('/pengelolaan/layanan/{id}', [PageController::class, 'updateLayanan'])->name('layanan.update');
 Route::delete('/pengelolaan/layanan/{id}', [PageController::class, 'destroyLayanan'])->name('layanan.destroy');
 
 // CRUD Portofolio
 Route::post('/pengelolaan/portofolio', [PageController::class, 'storePortofolio'])->name('portofolio.store');
-Route::put('/pengelolaan/portofolio/{id}', [PageController::class, 'updatePortofolio'])->name('portofolio.update');
+Route::post('/pengelolaan/portofolio/{id}', [PageController::class, 'updatePortofolio'])->name('portofolio.update');
 Route::delete('/pengelolaan/portofolio/{id}', [PageController::class, 'destroyPortofolio'])->name('portofolio.destroy');
 
 // CRUD Paket (Pricing Plans)
 Route::post('/pengelolaan/paket', [PageController::class, 'storePaket'])->name('paket.store');
-Route::put('/pengelolaan/paket/{id}', [PageController::class, 'updatePaket'])->name('paket.update');
+Route::post('/pengelolaan/paket/{id}', [PageController::class, 'updatePaket'])->name('paket.update');
 Route::delete('/pengelolaan/paket/{id}', [PageController::class, 'destroyPaket'])->name('paket.destroy');
 
 

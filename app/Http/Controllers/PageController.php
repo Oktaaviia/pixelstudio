@@ -463,9 +463,9 @@ class PageController extends BaseController
             'title'       => 'required|string|max:150',
             'category'    => 'required|string|max:100',
             'klien'       => 'nullable|string|max:100',
-            'tahun'       => 'nullable|integer|between:1900,2100',
+            'tahun'       => 'nullable|string|max:10',
             'description' => 'nullable|string',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
         ]);
 
         $fileImage = null;
@@ -498,9 +498,9 @@ class PageController extends BaseController
             'title'       => 'required|string|max:150',
             'category'    => 'required|string|max:100',
             'klien'       => 'nullable|string|max:100',
-            'tahun'       => 'nullable|integer|between:1900,2100',
+            'tahun'       => 'nullable|string|max:10',
             'description' => 'nullable|string',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
         ]);
 
         $porto = DB::table('portfolios')->where('id', $id)->first();

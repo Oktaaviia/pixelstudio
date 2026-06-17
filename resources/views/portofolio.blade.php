@@ -175,7 +175,7 @@
             <button type="button" class="admin-modal-close" onclick="toggleModal('modalEditPorto')">&times;</button>
         </div>
         <form id="formEditPorto" method="POST" class="admin-form" enctype="multipart/form-data">
-            @csrf @method('PUT')
+            @csrf
             <div class="admin-form-grid">
                 <div class="admin-field">
                     <label>Judul Karya *</label>

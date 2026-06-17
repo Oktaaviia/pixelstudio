@@ -188,7 +188,7 @@
             <button type="button" class="admin-modal-close" onclick="toggleModal('modalEditLayanan')">&times;</button>
         </div>
         <form id="formEditLayanan" method="POST" class="admin-form">
-            @csrf @method('PUT')
+            @csrf
             <div class="admin-form-grid">
                 <div class="admin-field">
                     <label>Nama Layanan *</label>
